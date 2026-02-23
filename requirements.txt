@@ -1,0 +1,9 @@
+torch
+transformers
+peft
+datasets
+evaluate
+scikit-learn
+gradio
+accelerate
+rouge_score
