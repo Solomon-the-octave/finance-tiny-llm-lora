@@ -1,7 +1,6 @@
 # FINANCE-TINY  
 ### Fine-Tuning TinyLlama for Financial Sentiment Classification using LoRA
 
----
 
 ## Project Overview
 
@@ -15,7 +14,6 @@ The model classifies financial sentences into three categories:
 
 Instead of full fine-tuning, this project uses parameter-efficient LoRA adapters to specialize the model under limited GPU constraints.
 
----
 
 ##  Problem Statement
 
@@ -26,7 +24,6 @@ This project addresses the question:
 
 > How can a small instruction-tuned language model be efficiently adapted for accurate financial sentiment classification without performing full fine-tuning?
 
----
 
 ## Dataset
 
@@ -42,7 +39,6 @@ Text: The company reported record quarterly revenue.
 Answer: positive
 
 
----
 
 ##  Model & Fine-Tuning Setup
 
@@ -63,7 +59,6 @@ Answer: positive
 - AdamW optimizer
 - Parameter-efficient training on Google Colab GPU
 
----
 
 ##  Experiments & Results
 
@@ -78,8 +73,6 @@ Two LoRA experiments were conducted to evaluate hyperparameter effects.
 | LoRA – Experiment 2 | 5e-5 | 2 epochs | **0.811** | **0.733** | **0.945** |
 
 Final model improved accuracy from **26.9% → 81.1%**, demonstrating substantial gains from parameter-efficient domain adaptation.
-
----
 
 ##  Confusion Matrix (Final Model)
 
@@ -99,8 +92,6 @@ Order: `[negative, neutral, positive]`
 - Most misclassifications occur between positive and neutral  
 - Indicates conservative prediction behavior and possible class imbalance influence  
 
----
-
 ## Deployment
 
 The fine-tuned model was deployed using:
@@ -113,8 +104,6 @@ The interface:
 - Returns predicted sentiment label
 - Handles greetings and non-finance inputs gracefully
 
----
-
 ##  Repository Structure
 finance-tiny-llm-lora/
 │
@@ -124,8 +113,6 @@ finance-tiny-llm-lora/
 └── README.md
 
 
----
-
 ##  Installation
 
 Clone the repository:
@@ -134,8 +121,6 @@ git clone https://github.com/Solomon-the-octave/finance-tiny-llm-lora.git
 cd finance-tiny-llm-lora
 
 
----
-
 ##  Key Takeaways
 
 - LoRA enables efficient domain adaptation without full fine-tuning.
@@ -143,7 +128,6 @@ cd finance-tiny-llm-lora
 - Structured evaluation (accuracy, Macro F1, confusion matrix) is critical.
 - Deployment highlights real-world inference challenges beyond notebook metrics.
 
----
 
 ##  Author
 
@@ -151,5 +135,4 @@ cd finance-tiny-llm-lora
 Domain: Finance  
 Summative – Chatbot Project  
 
----
 
